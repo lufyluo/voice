@@ -7,6 +7,7 @@ public class UserEntity {
 
     private String password;
 
+    private String name;
 
     public Integer getId() {
         return id;
@@ -32,4 +33,11 @@ public class UserEntity {
         this.password = password;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

@@ -1,7 +1,7 @@
 package com.voice.api.services;
 
 import com.voice.api.Dtos.UserInfo;
-import com.voice.api.repositories.UserMapper;
+import com.voice.api.repositories.users.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +19,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public int add(List<UserInfo> userInfos) {
         return userMapper.batchInsert(userInfos);
+    }
+
+    @Override
+    public boolean login(String account, String password) {
+        return userMapper.isUserExist(account,password);
     }
 }
