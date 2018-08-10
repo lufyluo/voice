@@ -23,4 +23,9 @@ public class ResourceController {
     public int post(@RequestBody List<ResourceInfo> resourceInfos) {
         return 0;
     }
+
+    @RequestMapping(method = RequestMethod.GET)
+    public int get(@RequestParam UUID uuid) {
+        return 0;
+    }
 }
