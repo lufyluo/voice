@@ -7,6 +7,6 @@
     <groupId>esService</groupId>
     <artifactId>esInterfaces</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>jar</packaging>
     
 </project>
