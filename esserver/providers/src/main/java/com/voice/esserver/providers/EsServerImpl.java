@@ -4,9 +4,12 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.voice.EsServices;
 import com.voice.domain.ResourceEntity;
 
+import org.springframework.stereotype.Component;
+
 import java.util.UUID;
 
-@Service(timeout = 5000,version = "1.0.0")
+@Service(interfaceClass = EsServices.class)
+@Component
 public class EsServerImpl implements EsServices {
     @Override
     public int save(ResourceEntity resourceEntity) {
